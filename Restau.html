@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Restaurant Website</h1>
+    <hr>
+    <center>
+    <div class="container">
+        <form onsubmit="saveToNetwork(event)" class="form">
+            <label>Choose Dish:</label>
+            <input type="text" id="inputDish" placeholder="Enter Dish" required><br><br>
+            <label>Enter Price:</label>
+            <input type="number" id="inputPrice" placeholder="Enter Price" required><br><br>
+            <label>Choose a Table:</label>
+            <select id="table">
+            <option value="Table1">Table1</option>
+            <option value="Table2">Table2</option>
+            <option value="Tabel3">Table3</option>
+            </select><br><br>
+            <input type="submit" id="submit">
+        </form>
+    </div>
+</center>
+    <div>
+        <h2>Orders</h2>
+        <h3>Table 1</h3>
+        <ul id="List1"></ul>
+        <h3>Table 2</h3>
+        <ul id="List2"></ul>
+        <h3>Table 3</h3>
+        <ul id="List3"></ul>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.0/axios.min.js"></script>
+    <script src="Restaurant.js"></script>
+
+</body>
+</html>
