@@ -10,6 +10,29 @@ function saveToNetwork(event) {
   const ul = document.getElementById(`List${table.slice(-1)}`); //It will extract number from table
   const li = document.createElement("li");
   li.textContent = `${dish} - ₹${price}`;
+
+  const obj={
+    dish,
+    price,
+    table
+  }
+  axios.post("https://crudcrud.com/api/9bde217bc3fc46ea8fd2e4c470a35a61/restaurant",obj)
+  .then((response)=>{
+    console.log(response)
+  })
+  .catch((err)=>{
+    console.log(err)
+  })
+
+  window.addEventListener("DOMContentLoaded", ()=>{
+    axios.get("https://crudcrud.com/api/9bde217bc3fc46ea8fd2e4c470a35a61/restaurant")
+    .then((response)=>{
+      console.log(response)
+    })
+    .catch((err)=>{
+      console.log(err)
+    })
+  })
   const deleteButton = document.createElement("button");
     deleteButton.textContent = "Delete";
     deleteButton.className = "delete-button";
