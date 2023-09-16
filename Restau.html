@@ -1,42 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurant Website</title>
+    <title>Restaurant</title>
     <link rel="stylesheet" href="style.css">
-</head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 <body>
-    <h1>Restaurant Website</h1>
-    <hr>
-    <center>
+    <header>
+        <h1>Restaurant Project</h1>
+    </header>
     <div class="container">
-        <form onsubmit="saveToNetwork(event)" class="form">
-            <label>Choose Dish:</label>
-            <input type="text" id="inputDish" placeholder="Enter Dish" required><br><br>
-            <label>Enter Price:</label>
-            <input type="number" id="inputPrice" placeholder="Enter Price" required><br><br>
-            <label>Choose a Table:</label>
-            <select id="table">
-            <option value="Table1">Table1</option>
-            <option value="Table2">Table2</option>
-            <option value="Tabel3">Table3</option>
-            </select><br><br>
-            <input type="submit" id="submit">
+        <form class="my-form my-form-style" onsubmit="saveData(event)">
+            <div class="form-control row">
+                <input type="text" name="dishes"  id="dishes" placeholder="Dishes Name" class="form-inputs">
+                <input type="text" name="price" id="price" placeholder="Price" class="form-inputs">
+                <input type="number" name="table" id="table" placeholder="Select Table Number" class="form-inputs">
+                <button type="submit" class="btn btn-info form-inputs">Add Bill</button>
+            </div>
         </form>
-    </div>
-</center>
-    <div>
-        <h2>Orders</h2>
-        <h3>Table 1</h3>
-        <ul id="List1"></ul>
-        <h3>Table 2</h3>
-        <ul id="List2"></ul>
-        <h3>Table 3</h3>
-        <ul id="List3"></ul>
+        <hr>
+        <div id="parent" class="BillList"></div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.0/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
     <script src="Restaurant.js"></script>
-
 </body>
+
 </html>

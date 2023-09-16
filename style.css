@@ -1,36 +1,28 @@
-.body{
-    background-color: #ffffff;
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0%;
-    padding: 0px;
+header {
+    background-color: black;
 }
 
-.container{
-    max-width: 400px;
-    margin: 30px auto;
+header h1 {
     text-align: center;
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    color: white;
 }
-.h2{
-    margin: 0px;
+
+.my-form-style {
+    margin-top: 30px;
+    /* background-color: rgb(0, 0, 0); */
 }
-.form input[type="text"],
-.form input[type="number"],
-.form select {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
+
+.form-inputs {
+    margin: 10px 10px;
+    padding: 5px;
 }
-.form label {
-    display: block;
-    font-weight: bold;
-    text-align: left;
-    font-size: 20px;
-    margin-bottom: 7px;
+
+.BillList {
+    margin-top: 20px;
+}
+
+.style-li {
+    list-style: none;
+    margin: 10px 0;
+    margin-left: 120px
 }
